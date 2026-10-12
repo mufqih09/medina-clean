@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminDashboardController;
+use App\Http\Controllers\Admin\AdminOrderController;
+use App\Http\Controllers\Admin\AdminWorkerController;
 use App\Http\Controllers\Customer\CustomerDashboardController;
 use App\Http\Controllers\Customer\OrderController;
 use App\Http\Controllers\ProfileController;
@@ -30,6 +32,9 @@ Route::get('/dashboard', function () {
 // Admin Routes (Role: ADMIN)
 Route::middleware(['auth', 'role:ADMIN'])->prefix('admin')->name('admin.')->group(function () {
     Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
+    Route::post('/workers', [AdminWorkerController::class, 'store'])->name('workers.store');
+    Route::patch('/orders/{order}/assign', [AdminOrderController::class, 'assignWorker'])->name('orders.assign');
+    Route::get('/orders/export', [AdminOrderController::class, 'export'])->name('orders.export');
 });
 
 // Worker Routes (Role: WORKER)
