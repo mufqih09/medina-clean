@@ -5,6 +5,7 @@ use App\Http\Controllers\Customer\CustomerDashboardController;
 use App\Http\Controllers\Customer\OrderController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Worker\WorkerDashboardController;
+use App\Http\Controllers\Worker\WorkerOrderController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -34,6 +35,8 @@ Route::middleware(['auth', 'role:ADMIN'])->prefix('admin')->name('admin.')->grou
 // Worker Routes (Role: WORKER)
 Route::middleware(['auth', 'role:WORKER'])->prefix('worker')->name('worker.')->group(function () {
     Route::get('/dashboard', [WorkerDashboardController::class, 'index'])->name('dashboard');
+    Route::post('/orders', [WorkerOrderController::class, 'store'])->name('orders.store');
+    Route::patch('/orders/{order}/status', [WorkerOrderController::class, 'updateStatus'])->name('orders.update-status');
 });
 
 // Customer Routes (Role: CUSTOMER)
