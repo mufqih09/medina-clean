@@ -13,7 +13,7 @@
         </div>
     </x-slot>
 
-    <div class="py-6 sm:py-8">
+    <div class="py-6 sm:py-8" x-data="">
         <div class="max-w-2xl mx-auto px-4 sm:px-6 space-y-4">
             <!-- Flash Status Notifications -->
             @if(session('status'))
@@ -70,7 +70,7 @@
 
             <!-- Action Button: Tambah Laporan Harian (PRD Flow 1) -->
             <div>
-                <button type="button" @click="$dispatch('open-modal', 'create-report-modal')" class="w-full py-3 bg-medina hover:bg-[#3baad3] text-white font-semibold text-sm rounded-lg shadow-sm flex items-center justify-center gap-2 transition cursor-pointer">
+                <button type="button" x-data="" x-on:click.prevent="$dispatch('open-modal', 'create-report-modal')" class="w-full py-3 bg-medina hover:bg-[#3baad3] text-white font-semibold text-sm rounded-lg shadow-sm flex items-center justify-center gap-2 transition cursor-pointer">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
                     + Input Laporan Pengerjaan
                 </button>
@@ -117,7 +117,7 @@
                         </div>
 
                         <div class="pt-1 flex items-center gap-2">
-                            <button type="button" @click="$dispatch('open-modal', 'update-status-modal-{{ $order->id }}')" class="flex-1 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 text-xs font-semibold rounded-md border border-gray-200 transition cursor-pointer">
+                            <button type="button" x-data="" x-on:click.prevent="$dispatch('open-modal', 'update-status-modal-{{ $order->id }}')" class="flex-1 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 text-xs font-semibold rounded-md border border-gray-200 transition cursor-pointer">
                                 Ubah Status Pengerjaan
                             </button>
                             <a href="https://maps.google.com/?q={{ urlencode($order->location) }}" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 bg-white border border-gray-300 hover:border-gray-400 text-gray-700 text-xs font-medium rounded-md transition cursor-pointer">

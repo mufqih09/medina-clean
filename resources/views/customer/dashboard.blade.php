@@ -13,7 +13,7 @@
         </div>
     </x-slot>
 
-    <div class="py-6 sm:py-8">
+    <div class="py-6 sm:py-8" x-data="">
         <div class="max-w-2xl mx-auto px-4 sm:px-6 space-y-4">
             <!-- Flash Status Notifications -->
             @if(session('status'))
@@ -50,7 +50,7 @@
                     </p>
                 </div>
                 <div class="shrink-0">
-                    <button type="button" @click="$dispatch('open-modal', 'create-order-modal')" class="w-full sm:w-auto px-4 py-2.5 bg-medina hover:bg-[#3baad3] text-white font-semibold text-xs rounded-lg shadow-sm transition cursor-pointer">
+                    <button type="button" x-data="" x-on:click.prevent="$dispatch('open-modal', 'create-order-modal')" class="w-full sm:w-auto px-4 py-2.5 bg-medina hover:bg-[#3baad3] text-white font-semibold text-xs rounded-lg shadow-sm transition cursor-pointer">
                         + Pesan Jasa Cuci
                     </button>
                 </div>
@@ -130,7 +130,7 @@
 
                             <div class="flex items-center gap-2">
                                 @if($order->payment_status !== 'PAID')
-                                    <button type="button" @click="$dispatch('open-modal', 'pay-order-{{ $order->id }}')" class="px-3 py-1.5 bg-medina text-white rounded-md font-semibold hover:bg-[#3baad3] transition cursor-pointer">
+                                    <button type="button" x-data="" x-on:click.prevent="$dispatch('open-modal', 'pay-order-{{ $order->id }}')" class="px-3 py-1.5 bg-medina text-white rounded-md font-semibold hover:bg-[#3baad3] transition cursor-pointer">
                                         Instruksi Bayar
                                     </button>
                                 @endif
@@ -232,7 +232,7 @@
                         <p class="text-sm font-semibold text-gray-700">Belum ada riwayat pesanan.</p>
                         <p class="text-xs text-gray-500 mt-1">Gunakan tombol "Pesan Jasa Cuci" di atas untuk membuat pesanan pertama Anda.</p>
                         <div class="mt-4">
-                            <button type="button" @click="$dispatch('open-modal', 'create-order-modal')" class="px-4 py-2 bg-medina hover:bg-[#3baad3] text-white font-semibold text-xs rounded-lg shadow-sm transition cursor-pointer">
+                            <button type="button" x-data="" x-on:click.prevent="$dispatch('open-modal', 'create-order-modal')" class="px-4 py-2 bg-medina hover:bg-[#3baad3] text-white font-semibold text-xs rounded-lg shadow-sm transition cursor-pointer">
                                 Buat Pesanan Baru
                             </button>
                         </div>
