@@ -52,13 +52,18 @@
         </header>
 
         <main class="flex-grow">
-            <!-- Hero with Live Cost Estimator & Quick Presets -->
-            <section class="relative bg-gradient-to-b from-white via-sky-50/20 to-[#F9FAFB] border-b border-gray-200 py-12 sm:py-20 overflow-hidden">
+            <!-- 1. Hero with Background Image & Ambient Blue Tint -->
+            <section class="relative bg-gradient-to-br from-sky-100/60 via-white to-sky-50/70 border-b border-gray-200 py-12 sm:py-20 overflow-hidden">
+                <!-- Subtle Background Texture Image Overlay -->
+                <div class="absolute inset-0 bg-cover bg-center pointer-events-none opacity-[0.12] mix-blend-multiply" style="background-image: url('{{ asset('images/cleaning-hero.jpg') }}')"></div>
+                <div class="absolute -top-24 -left-24 w-96 h-96 bg-sky-200/40 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="absolute top-1/2 -right-24 w-96 h-96 bg-[#4CBBE4]/20 rounded-full blur-3xl pointer-events-none"></div>
+
                 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
                         <!-- Left: Value Proposition & Trust Signals -->
                         <div class="lg:col-span-7">
-                            <div class="inline-flex items-center gap-2 bg-sky-50 border border-sky-200 text-[#1484b3] text-xs font-semibold px-3 py-1.5 rounded-full shadow-2xs">
+                            <div class="inline-flex items-center gap-2 bg-white/90 backdrop-blur-xs border border-sky-200 text-[#1484b3] text-xs font-semibold px-3 py-1.5 rounded-full shadow-2xs">
                                 <span class="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
                                 <span>Layanan Cuci Karpet Panggilan &bull; Jabodetabek</span>
                             </div>
@@ -83,7 +88,7 @@
                                         Pesan Jadwal Cuci
                                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                                     </a>
-                                    <a href="https://wa.me/6281234567890?text=Halo%20Medina%20Clean%2C%20saya%20mau%20konsultasi%20cuci%20karpet" target="_blank" rel="noopener noreferrer" class="px-5 py-3 bg-white border border-gray-300 hover:border-gray-400 text-gray-700 text-sm font-medium rounded-xl transition inline-flex items-center gap-2">
+                                    <a href="https://wa.me/6281234567890?text=Halo%20Medina%20Clean%2C%20saya%20mau%20konsultasi%20cuci%20karpet" target="_blank" rel="noopener noreferrer" class="px-5 py-3 bg-white/90 backdrop-blur-xs border border-gray-300 hover:border-gray-400 text-gray-700 text-sm font-medium rounded-xl transition inline-flex items-center gap-2">
                                         <svg class="w-4 h-4 text-emerald-600" viewBox="0 0 24 24" fill="currentColor">
                                             <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm5.79 14.07c-.24.67-1.39 1.29-1.93 1.37-.51.08-1.16.11-3.69-.94-2.88-1.2-4.73-4.14-4.87-4.33-.14-.19-1.17-1.55-1.17-2.96 0-1.41.74-2.1 1-2.38.27-.27.59-.34.79-.34.2 0 .4 0 .58.01.19.01.44-.07.69.52.26.61.88 2.14.96 2.3.08.16.13.35.03.55-.1.2-.15.33-.3.51-.15.18-.32.4-.46.54-.15.15-.31.32-.13.63.18.31.79 1.3 1.7 2.11 1.17 1.04 2.16 1.37 2.47 1.52.31.15.49.13.67-.08.19-.21.79-.92 1-1.23.21-.31.42-.26.71-.15.29.11 1.83.86 2.14 1.02.31.16.52.24.6.37.08.13.08.77-.16 1.44z"/>
                                         </svg>
@@ -93,7 +98,7 @@
                             </div>
 
                             <!-- Trust Badges List -->
-                            <div class="mt-8 pt-6 border-t border-gray-200/80 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-gray-600">
+                            <div class="mt-8 pt-6 border-t border-gray-200/80 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-gray-700">
                                 <div class="flex items-center gap-2">
                                     <div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
                                         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
@@ -130,7 +135,7 @@
                             get total() { return Math.round(this.area * this.rate); },
                             formatIdr(val) { return new Intl.NumberFormat('id-ID').format(val); }
                         }">
-                            <div class="bg-white border border-gray-200/90 rounded-2xl p-6 sm:p-7 shadow-md relative">
+                            <div class="bg-white border border-gray-200/90 rounded-2xl p-6 sm:p-7 shadow-lg relative">
                                 <div class="flex items-center justify-between pb-4 border-b border-gray-100">
                                     <div>
                                         <h2 class="font-bold text-gray-900 text-base flex items-center gap-1.5">
@@ -226,32 +231,35 @@
                 </div>
             </section>
 
-            <!-- Trust Counters / Highlight Ribbon -->
-            <section class="border-b border-gray-200 bg-white py-6">
+            <!-- 2. Trust Counters Ribbon (WARNA BIRU MEDINA) -->
+            <section class="bg-gradient-to-r from-[#11698e] via-[#4CBBE4] to-[#11698e] text-white py-8 shadow-md border-y border-[#3baad3]">
                 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
                         <div class="p-2">
-                            <div class="text-2xl sm:text-3xl font-extrabold text-gray-900">4.9 / 5.0</div>
-                            <div class="text-xs text-gray-500 mt-1 font-medium">Tingkat Kepuasan Klien</div>
+                            <div class="text-3xl sm:text-4xl font-extrabold text-white flex items-center justify-center gap-1">
+                                <span>4.9</span>
+                                <span class="text-amber-300 text-2xl">&#9733;</span>
+                            </div>
+                            <div class="text-xs sm:text-sm text-sky-100 mt-1 font-medium">Tingkat Kepuasan Klien</div>
                         </div>
-                        <div class="p-2 border-l border-gray-100">
-                            <div class="text-2xl sm:text-3xl font-extrabold text-[#1484b3]">100%</div>
-                            <div class="text-xs text-gray-500 mt-1 font-medium">Teknisi Internal Terlatih</div>
+                        <div class="p-2 border-l border-white/20">
+                            <div class="text-3xl sm:text-4xl font-extrabold text-white">100%</div>
+                            <div class="text-xs sm:text-sm text-sky-100 mt-1 font-medium">Teknisi Internal Terlatih</div>
                         </div>
-                        <div class="p-2 border-l border-gray-100">
-                            <div class="text-2xl sm:text-3xl font-extrabold text-gray-900">2–4 Jam</div>
-                            <div class="text-xs text-gray-500 mt-1 font-medium">Kering Cepat Tanpa Jemur</div>
+                        <div class="p-2 border-l border-white/20">
+                            <div class="text-3xl sm:text-4xl font-extrabold text-white">2–4 Jam</div>
+                            <div class="text-xs sm:text-sm text-sky-100 mt-1 font-medium">Kering Cepat di Tempat</div>
                         </div>
-                        <div class="p-2 border-l border-gray-100">
-                            <div class="text-2xl sm:text-3xl font-extrabold text-emerald-600">Garansi</div>
-                            <div class="text-xs text-gray-500 mt-1 font-medium">Cuci Ulang Jika Masih Bau</div>
+                        <div class="p-2 border-l border-white/20">
+                            <div class="text-3xl sm:text-4xl font-extrabold text-emerald-200">Garansi</div>
+                            <div class="text-xs sm:text-sm text-sky-100 mt-1 font-medium">Cuci Ulang Bebas Bau</div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Problem vs Solution Section (Inspirasi Gaia Home Hygiene ATM) -->
-            <section id="kenapa-kami" class="py-16 sm:py-20 bg-[#F9FAFB]">
+            <!-- 3. Problem vs Solution Section (WARNA PUTIH/NEUTRAL) -->
+            <section id="kenapa-kami" class="py-16 sm:py-20 bg-white">
                 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center max-w-2xl mx-auto">
                         <span class="text-xs font-bold text-[#1484b3] uppercase tracking-wider bg-sky-50 px-3 py-1 rounded-full border border-sky-200">
@@ -267,39 +275,39 @@
 
                     <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
                         <!-- Problem Card -->
-                        <div class="bg-white rounded-2xl p-6 sm:p-8 border border-red-100 shadow-sm relative overflow-hidden flex flex-col justify-between">
-                            <div class="absolute top-0 right-0 w-24 h-24 bg-red-50 rounded-bl-full pointer-events-none -mr-4 -mt-4"></div>
+                        <div class="bg-rose-50/50 rounded-2xl p-6 sm:p-8 border border-rose-200 shadow-sm relative overflow-hidden flex flex-col justify-between">
+                            <div class="absolute top-0 right-0 w-24 h-24 bg-rose-100/60 rounded-bl-full pointer-events-none -mr-4 -mt-4"></div>
                             <div>
-                                <div class="inline-flex items-center gap-2 text-xs font-bold text-red-600 uppercase tracking-wider">
-                                    <span class="w-2 h-2 rounded-full bg-red-500"></span>
+                                <div class="inline-flex items-center gap-2 text-xs font-bold text-rose-700 uppercase tracking-wider">
+                                    <span class="w-2 h-2 rounded-full bg-rose-500"></span>
                                     Risiko Jika Hanya Disedot Vakum Kering Biasa
                                 </div>
                                 <h3 class="text-lg font-bold text-gray-900 mt-3">
                                     Tungau & Kotoran Mengendap di Dasar Serat
                                 </h3>
-                                <ul class="mt-4 space-y-3 text-sm text-gray-600">
+                                <ul class="mt-4 space-y-3 text-sm text-gray-700">
                                     <li class="flex items-start gap-3">
-                                        <span class="text-red-500 font-bold shrink-0 mt-0.5">&#10005;</span>
+                                        <span class="text-rose-500 font-bold shrink-0 mt-0.5">&#10005;</span>
                                         <span><strong>Tungau & Alergen:</strong> Menyebabkan bersin, gatal kulit, dan rasa tidak nyaman saat hidung menyentuh karpet waktu sujud.</span>
                                     </li>
                                     <li class="flex items-start gap-3">
-                                        <span class="text-red-500 font-bold shrink-0 mt-0.5">&#10005;</span>
+                                        <span class="text-rose-500 font-bold shrink-0 mt-0.5">&#10005;</span>
                                         <span><strong>Bau Apek Lembap:</strong> Kelembapan udara AC mengunci sisa tumpahan minuman atau keringat di lapisan bawah spons.</span>
                                     </li>
                                     <li class="flex items-start gap-3">
-                                        <span class="text-red-500 font-bold shrink-0 mt-0.5">&#10005;</span>
+                                        <span class="text-rose-500 font-bold shrink-0 mt-0.5">&#10005;</span>
                                         <span><strong>Warna Kusam & Serat Keras:</strong> Partikel debu tajam menggesek rajutan, membuat warna cepat pudar dan tekstur menjadi kasar.</span>
                                     </li>
                                 </ul>
                             </div>
-                            <div class="mt-6 pt-4 border-t border-gray-100 text-xs text-red-600 font-medium">
+                            <div class="mt-6 pt-4 border-t border-rose-200 text-xs text-rose-600 font-medium">
                                 *Vakum kering rumahan hanya mengangkat maksimal 30–40% kotoran dasar.
                             </div>
                         </div>
 
                         <!-- Solution Card -->
-                        <div class="bg-white rounded-2xl p-6 sm:p-8 border border-sky-200 shadow-sm relative overflow-hidden flex flex-col justify-between">
-                            <div class="absolute top-0 right-0 w-24 h-24 bg-sky-50 rounded-bl-full pointer-events-none -mr-4 -mt-4"></div>
+                        <div class="bg-sky-50/60 rounded-2xl p-6 sm:p-8 border border-sky-200 shadow-sm relative overflow-hidden flex flex-col justify-between">
+                            <div class="absolute top-0 right-0 w-24 h-24 bg-sky-100/70 rounded-bl-full pointer-events-none -mr-4 -mt-4"></div>
                             <div>
                                 <div class="inline-flex items-center gap-2 text-xs font-bold text-[#1484b3] uppercase tracking-wider">
                                     <span class="w-2 h-2 rounded-full bg-[#4CBBE4]"></span>
@@ -308,23 +316,23 @@
                                 <h3 class="text-lg font-bold text-gray-900 mt-3">
                                     Pembersihan Menyeluruh & Ekstraksi Tuntas
                                 </h3>
-                                <ul class="mt-4 space-y-3 text-sm text-gray-600">
+                                <ul class="mt-4 space-y-3 text-sm text-gray-700">
                                     <li class="flex items-start gap-3">
-                                        <span class="text-emerald-500 font-bold shrink-0 mt-0.5">&#10003;</span>
+                                        <span class="text-emerald-600 font-bold shrink-0 mt-0.5">&#10003;</span>
                                         <span><strong>Mesin Polisher 175 RPM:</strong> Mengangkat noda membandel dan melembutkan serat karpet tanpa mengikis rajutan shaf.</span>
                                     </li>
                                     <li class="flex items-start gap-3">
-                                        <span class="text-emerald-500 font-bold shrink-0 mt-0.5">&#10003;</span>
+                                        <span class="text-emerald-600 font-bold shrink-0 mt-0.5">&#10003;</span>
                                         <span><strong>Twin Motor Extractor 2000W:</strong> Menyedot 85–90% air kotor hingga ke pori terdalam, mencegah jamur dan bau apek.</span>
                                     </li>
                                     <li class="flex items-start gap-3">
-                                        <span class="text-emerald-500 font-bold shrink-0 mt-0.5">&#10003;</span>
+                                        <span class="text-emerald-600 font-bold shrink-0 mt-0.5">&#10003;</span>
                                         <span><strong>Shampo pH Netral & Disinfektan:</strong> Formula khusus tanpa deterjen keras atau residu lengket, aman bagi anak & jamaah.</span>
                                     </li>
                                 </ul>
                             </div>
-                            <div class="mt-6 pt-4 border-t border-gray-100 text-xs text-emerald-600 font-semibold flex items-center gap-1.5">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <div class="mt-6 pt-4 border-t border-sky-200 text-xs text-emerald-700 font-semibold flex items-center gap-1.5">
+                                <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                                 Hasil bersih mendalam, higienis, dan cepat kering 2–4 jam di lokasi.
                             </div>
                         </div>
@@ -332,11 +340,11 @@
                 </div>
             </section>
 
-            <!-- Real Services Breakdown -->
-            <section id="layanan" class="py-16 sm:py-20 bg-white border-t border-b border-gray-200">
+            <!-- 4. Layanan Spesialis (WARNA BIRU MUDA + FOTO GAMBAR PER LAYANAN) -->
+            <section id="layanan" class="py-16 sm:py-20 bg-gradient-to-b from-[#f0f9fd] via-[#e5f4fb] to-[#f0f9fd] border-y border-sky-100">
                 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="max-w-2xl">
-                        <span class="text-xs font-bold text-[#1484b3] uppercase tracking-wider bg-sky-50 px-3 py-1 rounded-full border border-sky-200">
+                        <span class="text-xs font-bold text-[#1484b3] uppercase tracking-wider bg-white px-3 py-1 rounded-full border border-sky-200 shadow-2xs">
                             Pilihan Layanan
                         </span>
                         <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mt-3">
@@ -349,55 +357,76 @@
 
                     <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
                         <!-- Service 1: Masjid -->
-                        <div class="bg-[#F9FAFB] rounded-2xl p-6 border border-gray-200 shadow-sm flex flex-col justify-between hover:border-[#4CBBE4] transition">
+                        <div class="bg-white rounded-2xl overflow-hidden border border-sky-100 shadow-sm hover:shadow-md transition flex flex-col justify-between group">
                             <div>
-                                <div class="w-10 h-10 rounded-xl bg-sky-100 text-[#1484b3] flex items-center justify-center font-bold">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                                <!-- Image Header with Badge -->
+                                <div class="relative h-48 w-full overflow-hidden bg-gray-100">
+                                    <img src="{{ asset('images/service-mosque.jpg') }}" alt="Cuci Karpet Masjid Medina Clean" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                                    <span class="absolute bottom-3 left-3 text-[11px] font-bold text-white bg-medina/90 backdrop-blur-xs px-2.5 py-1 rounded-md">
+                                        Jadwal Ba'da Isya Tersedia
+                                    </span>
                                 </div>
-                                <span class="text-xs font-bold text-[#1484b3] uppercase tracking-wider block mt-4">Tempat Ibadah</span>
-                                <h3 class="text-lg font-bold text-gray-900 mt-1">Karpet Masjid & Musholla</h3>
-                                <p class="text-sm text-gray-600 mt-2.5 leading-relaxed">
-                                    Pencucian karpet roll panjang atau sambungan shaf langsung di dalam masjid. Tersedia jadwal malam (ba'da Isya) agar karpet kering sempurna sebelum waktu Subuh atau shalat Jumat.
-                                </p>
+                                <div class="p-6">
+                                    <span class="text-xs font-bold text-[#1484b3] uppercase tracking-wider block">Tempat Ibadah</span>
+                                    <h3 class="text-lg font-bold text-gray-900 mt-1">Karpet Masjid & Musholla</h3>
+                                    <p class="text-sm text-gray-600 mt-2.5 leading-relaxed">
+                                        Pencucian karpet roll panjang atau sambungan shaf langsung di dalam masjid. Tersedia jadwal malam (ba'da Isya) agar karpet kering sempurna sebelum waktu Subuh atau shalat Jumat.
+                                    </p>
+                                </div>
                             </div>
-                            <div class="mt-6 pt-4 border-t border-gray-200 text-xs text-gray-500 space-y-1">
-                                <div class="font-medium text-gray-700">Cocok untuk:</div>
+                            <div class="px-6 pb-6 pt-3 border-t border-gray-100 text-xs text-gray-500 space-y-1 bg-gray-50/50">
+                                <div class="font-semibold text-gray-700">Cocok untuk:</div>
                                 <div>Karpet turki, karpet tebal 10–14 mm, sajadah imam</div>
                             </div>
                         </div>
 
                         <!-- Service 2: Kantor -->
-                        <div class="bg-[#F9FAFB] rounded-2xl p-6 border border-gray-200 shadow-sm flex flex-col justify-between hover:border-[#4CBBE4] transition">
+                        <div class="bg-white rounded-2xl overflow-hidden border border-sky-100 shadow-sm hover:shadow-md transition flex flex-col justify-between group">
                             <div>
-                                <div class="w-10 h-10 rounded-xl bg-sky-100 text-[#1484b3] flex items-center justify-center font-bold">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                                <!-- Image Header with Badge -->
+                                <div class="relative h-48 w-full overflow-hidden bg-gray-100">
+                                    <img src="{{ asset('images/service-office.jpg') }}" alt="Cuci Karpet Kantor Medina Clean" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                                    <span class="absolute bottom-3 left-3 text-[11px] font-bold text-white bg-[#1484b3]/90 backdrop-blur-xs px-2.5 py-1 rounded-md">
+                                        Layanan Weekend & Hari Libur
+                                    </span>
                                 </div>
-                                <span class="text-xs font-bold text-[#1484b3] uppercase tracking-wider block mt-4">Perkantoran</span>
-                                <h3 class="text-lg font-bold text-gray-900 mt-1">Karpet Kantor & Ruang Rapat</h3>
-                                <p class="text-sm text-gray-600 mt-2.5 leading-relaxed">
-                                    Pembersihan karpet tile dan wall-to-wall untuk mengangkat noda kopi, noda tinta, serta bau apek ruang ber-AC tanpa merusak lem karpet. Pengerjaan akhir pekan tanpa mengganggu jam kerja.
-                                </p>
+                                <div class="p-6">
+                                    <span class="text-xs font-bold text-[#1484b3] uppercase tracking-wider block">Perkantoran</span>
+                                    <h3 class="text-lg font-bold text-gray-900 mt-1">Karpet Kantor & Ruang Rapat</h3>
+                                    <p class="text-sm text-gray-600 mt-2.5 leading-relaxed">
+                                        Pembersihan karpet tile dan wall-to-wall untuk mengangkat noda kopi, noda tinta, serta bau apek ruang ber-AC tanpa merusak lem karpet. Pengerjaan akhir pekan tanpa mengganggu jam kerja kantor.
+                                    </p>
+                                </div>
                             </div>
-                            <div class="mt-6 pt-4 border-t border-gray-200 text-xs text-gray-500 space-y-1">
-                                <div class="font-medium text-gray-700">Cocok untuk:</div>
+                            <div class="px-6 pb-6 pt-3 border-t border-gray-100 text-xs text-gray-500 space-y-1 bg-gray-50/50">
+                                <div class="font-semibold text-gray-700">Cocok untuk:</div>
                                 <div>Karpet tile perkantoran, aula pertemuan, ballroom</div>
                             </div>
                         </div>
 
                         <!-- Service 3: Residensial -->
-                        <div class="bg-[#F9FAFB] rounded-2xl p-6 border border-gray-200 shadow-sm flex flex-col justify-between hover:border-[#4CBBE4] transition">
+                        <div class="bg-white rounded-2xl overflow-hidden border border-sky-100 shadow-sm hover:shadow-md transition flex flex-col justify-between group">
                             <div>
-                                <div class="w-10 h-10 rounded-xl bg-sky-100 text-[#1484b3] flex items-center justify-center font-bold">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                                <!-- Image Header with Badge -->
+                                <div class="relative h-48 w-full overflow-hidden bg-gray-100">
+                                    <img src="{{ asset('images/service-home.jpg') }}" alt="Cuci Permadani Rumah Medina Clean" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                                    <span class="absolute bottom-3 left-3 text-[11px] font-bold text-white bg-emerald-600/90 backdrop-blur-xs px-2.5 py-1 rounded-md">
+                                        Aman Bayi & Hewan Peliharaan
+                                    </span>
                                 </div>
-                                <span class="text-xs font-bold text-[#1484b3] uppercase tracking-wider block mt-4">Residensial</span>
-                                <h3 class="text-lg font-bold text-gray-900 mt-1">Karpet Rumah & Permadani</h3>
-                                <p class="text-sm text-gray-600 mt-2.5 leading-relaxed">
-                                    Pencucian higienis untuk karpet ruang keluarga dan kamar anak. Mengangkat bulu hewan peliharaan, tungau, dan remah makanan dengan sampo lembut ramah kulit.
-                                </p>
+                                <div class="p-6">
+                                    <span class="text-xs font-bold text-[#1484b3] uppercase tracking-wider block">Residensial</span>
+                                    <h3 class="text-lg font-bold text-gray-900 mt-1">Karpet Rumah & Permadani</h3>
+                                    <p class="text-sm text-gray-600 mt-2.5 leading-relaxed">
+                                        Pencucian higienis untuk karpet ruang keluarga dan kamar anak. Mengangkat bulu hewan peliharaan, tungau, dan remah makanan dengan sampo lembut ramah kulit.
+                                    </p>
+                                </div>
                             </div>
-                            <div class="mt-6 pt-4 border-t border-gray-200 text-xs text-gray-500 space-y-1">
-                                <div class="font-medium text-gray-700">Cocok untuk:</div>
+                            <div class="px-6 pb-6 pt-3 border-t border-gray-100 text-xs text-gray-500 space-y-1 bg-gray-50/50">
+                                <div class="font-semibold text-gray-700">Cocok untuk:</div>
                                 <div>Permadani wol, karpet bulu sintetis, rasfur, karpet bermain</div>
                             </div>
                         </div>
@@ -405,8 +434,8 @@
                 </div>
             </section>
 
-            <!-- Bagian: Transparansi Spesifikasi Alat & Bahan Pembersih -->
-            <section id="alat" class="bg-white py-16 sm:py-20">
+            <!-- 5. Transparansi Spesifikasi Alat & Bahan Pembersih (WARNA PUTIH) -->
+            <section id="alat" class="bg-white py-16 sm:py-20 border-b border-gray-200">
                 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="max-w-2xl">
                         <span class="inline-block text-xs font-semibold uppercase tracking-wider text-[#1484b3] bg-sky-50 px-3 py-1 rounded-full border border-sky-200">
@@ -540,11 +569,11 @@
                 </div>
             </section>
 
-            <!-- How It Works (Concrete 4-Step Process) -->
-            <section class="border-t border-gray-200 bg-[#F9FAFB] py-16 sm:py-20">
+            <!-- 6. Alur Pengerjaan 4 Langkah (WARNA BIRU LEMBUT) -->
+            <section class="bg-gradient-to-b from-[#f0f9fd] to-[#e0f2fa] py-16 sm:py-20 border-b border-sky-200/60">
                 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center max-w-xl mx-auto">
-                        <span class="text-xs font-bold text-[#1484b3] uppercase tracking-wider bg-sky-50 px-3 py-1 rounded-full border border-sky-200">
+                        <span class="text-xs font-bold text-[#1484b3] uppercase tracking-wider bg-white px-3 py-1 rounded-full border border-sky-200 shadow-2xs">
                             Alur Pengerjaan
                         </span>
                         <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mt-3">
@@ -556,7 +585,7 @@
                     </div>
 
                     <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <div class="p-6 border border-gray-200 rounded-2xl bg-white shadow-xs">
+                        <div class="p-6 border border-sky-100 rounded-2xl bg-white shadow-sm hover:border-[#4CBBE4] transition">
                             <span class="w-8 h-8 rounded-lg bg-medina text-white font-bold text-sm flex items-center justify-center">1</span>
                             <h4 class="font-bold text-gray-900 text-base mt-4">Pesan & Tentukan Jadwal</h4>
                             <p class="text-xs text-gray-600 mt-2 leading-relaxed">
@@ -564,7 +593,7 @@
                             </p>
                         </div>
 
-                        <div class="p-6 border border-gray-200 rounded-2xl bg-white shadow-xs">
+                        <div class="p-6 border border-sky-100 rounded-2xl bg-white shadow-sm hover:border-[#4CBBE4] transition">
                             <span class="w-8 h-8 rounded-lg bg-gray-800 text-white font-bold text-sm flex items-center justify-center">2</span>
                             <h4 class="font-bold text-gray-900 text-base mt-4">Tim Berangkat ke Lokasi</h4>
                             <p class="text-xs text-gray-600 mt-2 leading-relaxed">
@@ -572,7 +601,7 @@
                             </p>
                         </div>
 
-                        <div class="p-6 border border-gray-200 rounded-2xl bg-white shadow-xs">
+                        <div class="p-6 border border-sky-100 rounded-2xl bg-white shadow-sm hover:border-[#4CBBE4] transition">
                             <span class="w-8 h-8 rounded-lg bg-gray-800 text-white font-bold text-sm flex items-center justify-center">3</span>
                             <h4 class="font-bold text-gray-900 text-base mt-4">Pencucian di Lokasi</h4>
                             <p class="text-xs text-gray-600 mt-2 leading-relaxed">
@@ -580,7 +609,7 @@
                             </p>
                         </div>
 
-                        <div class="p-6 border border-gray-200 rounded-2xl bg-white shadow-xs">
+                        <div class="p-6 border border-sky-100 rounded-2xl bg-white shadow-sm hover:border-[#4CBBE4] transition">
                             <span class="w-8 h-8 rounded-lg bg-emerald-600 text-white font-bold text-sm flex items-center justify-center">4</span>
                             <h4 class="font-bold text-gray-900 text-base mt-4">Pemeriksaan & Selesai</h4>
                             <p class="text-xs text-gray-600 mt-2 leading-relaxed">
@@ -591,8 +620,8 @@
                 </div>
             </section>
 
-            <!-- Testimoni Pelanggan / Grounded Social Proof (ATM Gaia) -->
-            <section id="testimoni" class="py-16 sm:py-20 bg-white border-t border-gray-200">
+            <!-- 7. Testimoni Pelanggan (WARNA PUTIH) -->
+            <section id="testimoni" class="py-16 sm:py-20 bg-white border-b border-gray-200">
                 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center max-w-xl mx-auto">
                         <span class="text-xs font-bold text-[#1484b3] uppercase tracking-wider bg-sky-50 px-3 py-1 rounded-full border border-sky-200">
@@ -673,11 +702,11 @@
                 </div>
             </section>
 
-            <!-- Interactive FAQ Accordion (Alpine.js) -->
-            <section id="faq" class="py-16 sm:py-20 bg-[#F9FAFB] border-t border-gray-200" x-data="{ active: null }">
+            <!-- 8. Interactive FAQ Accordion (WARNA BIRU MUDA SKY-50) -->
+            <section id="faq" class="py-16 sm:py-20 bg-gradient-to-b from-sky-50/70 via-sky-100/40 to-sky-50/70 border-b border-sky-100" x-data="{ active: null }">
                 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center max-w-xl mx-auto">
-                        <span class="text-xs font-bold text-[#1484b3] uppercase tracking-wider bg-sky-50 px-3 py-1 rounded-full border border-sky-200">
+                        <span class="text-xs font-bold text-[#1484b3] uppercase tracking-wider bg-white px-3 py-1 rounded-full border border-sky-200 shadow-2xs">
                             Pertanyaan Umum
                         </span>
                         <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mt-3">
@@ -690,7 +719,7 @@
 
                     <div class="mt-10 space-y-3">
                         <!-- FAQ 1 -->
-                        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden transition shadow-2xs">
+                        <div class="bg-white border border-sky-100 rounded-xl overflow-hidden transition shadow-2xs">
                             <button type="button" @click="active = (active === 1 ? null : 1)" class="w-full px-5 py-4 text-left flex justify-between items-center gap-4 text-gray-900 font-semibold text-sm hover:text-medina transition cursor-pointer">
                                 <span>Berapa lama proses pengeringan karpet setelah dicuci?</span>
                                 <svg class="w-4 h-4 text-gray-500 shrink-0 transform transition-transform duration-200" :class="{ 'rotate-180': active === 1 }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
@@ -701,7 +730,7 @@
                         </div>
 
                         <!-- FAQ 2 -->
-                        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden transition shadow-2xs">
+                        <div class="bg-white border border-sky-100 rounded-xl overflow-hidden transition shadow-2xs">
                             <button type="button" @click="active = (active === 2 ? null : 2)" class="w-full px-5 py-4 text-left flex justify-between items-center gap-4 text-gray-900 font-semibold text-sm hover:text-medina transition cursor-pointer">
                                 <span>Apakah karpet perlu digulung dan dibawa ke workshop?</span>
                                 <svg class="w-4 h-4 text-gray-500 shrink-0 transform transition-transform duration-200" :class="{ 'rotate-180': active === 2 }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
@@ -712,7 +741,7 @@
                         </div>
 
                         <!-- FAQ 3 -->
-                        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden transition shadow-2xs">
+                        <div class="bg-white border border-sky-100 rounded-xl overflow-hidden transition shadow-2xs">
                             <button type="button" @click="active = (active === 3 ? null : 3)" class="w-full px-5 py-4 text-left flex justify-between items-center gap-4 text-gray-900 font-semibold text-sm hover:text-medina transition cursor-pointer">
                                 <span>Apa saja yang perlu disiapkan oleh pihak pengurus atau tuan rumah?</span>
                                 <svg class="w-4 h-4 text-gray-500 shrink-0 transform transition-transform duration-200" :class="{ 'rotate-180': active === 3 }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
@@ -723,7 +752,7 @@
                         </div>
 
                         <!-- FAQ 4 -->
-                        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden transition shadow-2xs">
+                        <div class="bg-white border border-sky-100 rounded-xl overflow-hidden transition shadow-2xs">
                             <button type="button" @click="active = (active === 4 ? null : 4)" class="w-full px-5 py-4 text-left flex justify-between items-center gap-4 text-gray-900 font-semibold text-sm hover:text-medina transition cursor-pointer">
                                 <span>Apakah ada garansi jika karpet masih berbau atau ada noda tertinggal?</span>
                                 <svg class="w-4 h-4 text-gray-500 shrink-0 transform transition-transform duration-200" :class="{ 'rotate-180': active === 4 }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
@@ -734,7 +763,7 @@
                         </div>
 
                         <!-- FAQ 5 -->
-                        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden transition shadow-2xs">
+                        <div class="bg-white border border-sky-100 rounded-xl overflow-hidden transition shadow-2xs">
                             <button type="button" @click="active = (active === 5 ? null : 5)" class="w-full px-5 py-4 text-left flex justify-between items-center gap-4 text-gray-900 font-semibold text-sm hover:text-medina transition cursor-pointer">
                                 <span>Kapan pembayaran dilakukan dan metode apa saja yang tersedia?</span>
                                 <svg class="w-4 h-4 text-gray-500 shrink-0 transform transition-transform duration-200" :class="{ 'rotate-180': active === 5 }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
@@ -747,47 +776,49 @@
                 </div>
             </section>
 
-            <!-- Bottom CTA Banner (Warm & Engaging) -->
-            <section class="py-14 sm:py-18 bg-white">
+            <!-- 9. Bottom CTA Banner (BACKGROUND GAMBAR DENGAN OVERLAY BIRU MEDINA) -->
+            <section class="py-14 sm:py-20 bg-white">
                 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="bg-gradient-to-br from-[#4CBBE4] to-[#158ab6] rounded-3xl p-8 sm:p-12 text-white shadow-lg relative overflow-hidden">
-                        <div class="max-w-2xl relative z-10">
-                            <span class="text-xs font-bold uppercase tracking-wider bg-white/20 px-3 py-1 rounded-full text-white inline-block">
-                                Jadwal Cepat & Fleksibel
-                            </span>
-                            <h2 class="text-2xl sm:text-4xl font-bold mt-4 leading-tight">
-                                Siap Menikmati Karpet Bersih, Harum, dan Nyaman Kembali?
-                            </h2>
-                            <p class="mt-3 text-sm sm:text-base text-white/90 leading-relaxed">
-                                Konsultasikan luas karpet dan waktu pengerjaan yang paling cocok untuk Anda. Tim Medina Clean siap datang langsung ke tempat Anda.
-                            </p>
-                            <div class="mt-8 flex flex-wrap gap-3">
-                                @auth
-                                    <a href="{{ route('customer.dashboard') }}" class="px-6 py-3 bg-white text-gray-900 hover:bg-gray-100 text-sm font-bold rounded-xl shadow-sm transition">
-                                        Pesan Jadwal di Dashboard
-                                    </a>
-                                @else
-                                    <a href="{{ route('register') }}" class="px-6 py-3 bg-white text-gray-900 hover:bg-gray-100 text-sm font-bold rounded-xl shadow-sm transition">
-                                        Daftar & Pesan Sekarang
-                                    </a>
-                                    <a href="https://wa.me/6281234567890?text=Halo%20Medina%20Clean%2C%20saya%20mau%20konsultasi%20cuci%20karpet" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-white text-sm font-bold rounded-xl shadow-sm transition inline-flex items-center gap-2">
-                                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm5.79 14.07c-.24.67-1.39 1.29-1.93 1.37-.51.08-1.16.11-3.69-.94-2.88-1.2-4.73-4.14-4.87-4.33-.14-.19-1.17-1.55-1.17-2.96 0-1.41.74-2.1 1-2.38.27-.27.59-.34.79-.34.2 0 .4 0 .58.01.19.01.44-.07.69.52.26.61.88 2.14.96 2.3.08.16.13.35.03.55-.1.2-.15.33-.3.51-.15.18-.32.4-.46.54-.15.15-.31.32-.13.63.18.31.79 1.3 1.7 2.11 1.17 1.04 2.16 1.37 2.47 1.52.31.15.49.13.67-.08.19-.21.79-.92 1-1.23.21-.31.42-.26.71-.15.29.11 1.83.86 2.14 1.02.31.16.52.24.6.37.08.13.08.77-.16 1.44z"/>
-                                        </svg>
-                                        Chat WhatsApp CS
-                                    </a>
-                                @endauth
+                    <div class="relative bg-cover bg-center rounded-3xl shadow-xl overflow-hidden" style="background-image: url('{{ asset('images/cleaning-hero.jpg') }}')">
+                        <!-- Rich Medina Blue Gradient Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-r from-[#0d4f6d]/95 via-[#1484b3]/90 to-[#4CBBE4]/85"></div>
+
+                        <div class="relative z-10 p-8 sm:p-14 text-white">
+                            <div class="max-w-2xl">
+                                <span class="text-xs font-bold uppercase tracking-wider bg-white/20 px-3 py-1 rounded-full text-white inline-block">
+                                    Jadwal Cepat & Fleksibel
+                                </span>
+                                <h2 class="text-2xl sm:text-4xl font-bold mt-4 leading-tight">
+                                    Siap Menikmati Karpet Bersih, Harum, dan Nyaman Kembali?
+                                </h2>
+                                <p class="mt-3 text-sm sm:text-base text-white/90 leading-relaxed">
+                                    Konsultasikan luas karpet dan waktu pengerjaan yang paling cocok untuk Anda. Tim Medina Clean siap datang langsung ke tempat Anda.
+                                </p>
+                                <div class="mt-8 flex flex-wrap gap-3">
+                                    @auth
+                                        <a href="{{ route('customer.dashboard') }}" class="px-6 py-3 bg-white text-gray-900 hover:bg-gray-100 text-sm font-bold rounded-xl shadow-sm transition">
+                                            Pesan Jadwal di Dashboard
+                                        </a>
+                                    @else
+                                        <a href="{{ route('register') }}" class="px-6 py-3 bg-white text-gray-900 hover:bg-gray-100 text-sm font-bold rounded-xl shadow-sm transition">
+                                            Daftar & Pesan Sekarang
+                                        </a>
+                                        <a href="https://wa.me/6281234567890?text=Halo%20Medina%20Clean%2C%20saya%20mau%20konsultasi%20cuci%20karpet" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-white text-sm font-bold rounded-xl shadow-sm transition inline-flex items-center gap-2">
+                                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                                                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm5.79 14.07c-.24.67-1.39 1.29-1.93 1.37-.51.08-1.16.11-3.69-.94-2.88-1.2-4.73-4.14-4.87-4.33-.14-.19-1.17-1.55-1.17-2.96 0-1.41.74-2.1 1-2.38.27-.27.59-.34.79-.34.2 0 .4 0 .58.01.19.01.44-.07.69.52.26.61.88 2.14.96 2.3.08.16.13.35.03.55-.1.2-.15.33-.3.51-.15.18-.32.4-.46.54-.15.15-.31.32-.13.63.18.31.79 1.3 1.7 2.11 1.17 1.04 2.16 1.37 2.47 1.52.31.15.49.13.67-.08.19-.21.79-.92 1-1.23.21-.31.42-.26.71-.15.29.11 1.83.86 2.14 1.02.31.16.52.24.6.37.08.13.08.77-.16 1.44z"/>
+                                            </svg>
+                                            Chat WhatsApp CS
+                                        </a>
+                                    @endauth
+                                </div>
                             </div>
                         </div>
-
-                        <!-- Abstract pattern decoration -->
-                        <div class="absolute -bottom-12 -right-12 w-64 h-64 bg-white/10 rounded-full blur-2xl pointer-events-none"></div>
                     </div>
                 </div>
             </section>
         </main>
 
-        <!-- Comprehensive Footer -->
+        <!-- Comprehensive Footer (DARK SLATE) -->
         <footer class="bg-gray-900 text-gray-300 border-t border-gray-800 pt-12 pb-8">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-10 border-b border-gray-800">
