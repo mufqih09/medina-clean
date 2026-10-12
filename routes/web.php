@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Customer\CustomerDashboardController;
+use App\Http\Controllers\Customer\OrderController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Worker\WorkerDashboardController;
 use Illuminate\Support\Facades\Route;
@@ -38,6 +39,9 @@ Route::middleware(['auth', 'role:WORKER'])->prefix('worker')->name('worker.')->g
 // Customer Routes (Role: CUSTOMER)
 Route::middleware(['auth', 'role:CUSTOMER'])->prefix('customer')->name('customer.')->group(function () {
     Route::get('/dashboard', [CustomerDashboardController::class, 'index'])->name('dashboard');
+    Route::post('/orders', [OrderController::class, 'store'])->name('orders.store');
+    Route::post('/orders/{order}/pay', [OrderController::class, 'pay'])->name('orders.pay');
+    Route::delete('/orders/{order}', [OrderController::class, 'destroy'])->name('orders.destroy');
 });
 
 // Profile Management (Accessible by all authenticated users)
