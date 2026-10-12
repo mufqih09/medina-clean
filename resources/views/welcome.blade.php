@@ -218,6 +218,141 @@
                 </div>
             </section>
 
+            <!-- Bagian 4: Transparansi Spesifikasi Alat & Bahan Pembersih -->
+            <section class="border-t border-gray-200 bg-white py-14 sm:py-20">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="max-w-2xl">
+                        <span class="inline-block text-xs font-semibold uppercase tracking-wider text-[#1484b3] bg-sky-50 px-3 py-1 rounded-md border border-sky-200">
+                            Standar Peralatan & Higienitas
+                        </span>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mt-3">
+                            Transparansi Alat Industri & Bahan Pembersih
+                        </h2>
+                        <p class="text-sm text-gray-600 mt-2 leading-relaxed">
+                            Kami tidak mencuci secara asal basah. Setiap pengerjaan lapangan menggunakan peralatan berstandar industri dan formula kimia ramah serat agar karpet tetap awet dan higienis.
+                        </p>
+                    </div>
+
+                    <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Alat 1: Single Disc Scrubber -->
+                        <div class="bg-[#F9FAFB] border border-gray-200 rounded-xl p-5 shadow-sm flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between pb-3 border-b border-gray-200">
+                                    <span class="text-[11px] font-bold uppercase tracking-wider text-gray-500">Mesin Utama</span>
+                                    <span class="text-[11px] font-semibold text-[#1484b3] bg-sky-50 px-2 py-0.5 rounded border border-sky-200">175 RPM</span>
+                                </div>
+                                <h3 class="font-bold text-gray-900 text-base mt-3">Single-Disc Scrubber</h3>
+                                <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                                    Mesin sikat putar dengan pad bulu halus (*soft bristle*) untuk mengurai debu dan noda membandel hingga ke dasar rajutan tanpa merusak serat karpet.
+                                </p>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-gray-200 text-xs text-gray-600 space-y-1">
+                                <div class="flex items-center gap-1.5 text-gray-700 font-medium">
+                                    <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    <span>Putaran konstan merata</span>
+                                </div>
+                                <div class="flex items-center gap-1.5 text-gray-700 font-medium">
+                                    <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    <span>Tidak mengikis benang shaf</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Alat 2: Wet & Dry Extractor -->
+                        <div class="bg-[#F9FAFB] border border-gray-200 rounded-xl p-5 shadow-sm flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between pb-3 border-b border-gray-200">
+                                    <span class="text-[11px] font-bold uppercase tracking-wider text-gray-500">Ekstraksi Air</span>
+                                    <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">2000W Twin Motor</span>
+                                </div>
+                                <h3 class="font-bold text-gray-900 text-base mt-3">Vacuum Extractor</h3>
+                                <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                                    Vakum ekstraksi bertekanan tinggi untuk menyedot air kotor dan sisa busa hingga 85–90% tuntas, mencegah timbulnya bau apek dan jamur.
+                                </p>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-gray-200 text-xs text-gray-600 space-y-1">
+                                <div class="flex items-center gap-1.5 text-gray-700 font-medium">
+                                    <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    <span>Daya sedot air mendalam</span>
+                                </div>
+                                <div class="flex items-center gap-1.5 text-gray-700 font-medium">
+                                    <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    <span>Kering lebih cepat di tempat</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bahan 3: Shampo Karpet pH Netral -->
+                        <div class="bg-[#F9FAFB] border border-gray-200 rounded-xl p-5 shadow-sm flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between pb-3 border-b border-gray-200">
+                                    <span class="text-[11px] font-bold uppercase tracking-wider text-gray-500">Formula Pembersih</span>
+                                    <span class="text-[11px] font-semibold text-sky-700 bg-sky-50 px-2 py-0.5 rounded border border-sky-200">pH Netral 7.0</span>
+                                </div>
+                                <h3 class="font-bold text-gray-900 text-base mt-3">Low-Foam Shampoo</h3>
+                                <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                                    Deterjen karpet khusus busa rendah yang mengikat minyak dan noda tanpa meninggalkan residu lengket pemicu penumpukan debu baru.
+                                </p>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-gray-200 text-xs text-gray-600 space-y-1">
+                                <div class="flex items-center gap-1.5 text-gray-700 font-medium">
+                                    <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    <span>Aman saat sujud (non-iritasi)</span>
+                                </div>
+                                <div class="flex items-center gap-1.5 text-gray-700 font-medium">
+                                    <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    <span>Bebas bahan pemutih klorin</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bahan 4: Parfum & Antibakteri -->
+                        <div class="bg-[#F9FAFB] border border-gray-200 rounded-xl p-5 shadow-sm flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between pb-3 border-b border-gray-200">
+                                    <span class="text-[11px] font-bold uppercase tracking-wider text-gray-500">Finishing Higienis</span>
+                                    <span class="text-[11px] font-semibold text-purple-700 bg-purple-50 px-2 py-0.5 rounded border border-purple-200">Non-Alkohol</span>
+                                </div>
+                                <h3 class="font-bold text-gray-900 text-base mt-3">Parfum Antibakteri</h3>
+                                <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                                    Pewangi aroma khas tempat ibadah/hotel dengan formula disinfektan untuk membasmi kuman, tungau, serta bau apek ruang AC.
+                                </p>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-gray-200 text-xs text-gray-600 space-y-1">
+                                <div class="flex items-center gap-1.5 text-gray-700 font-medium">
+                                    <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    <span>Wangi segar dan tahan lama</span>
+                                </div>
+                                <div class="flex items-center gap-1.5 text-gray-700 font-medium">
+                                    <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    <span>Cepat kering tanpa noda air</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Callout Info Kebutuhan Listrik & Air -->
+                    <div class="mt-8 bg-sky-50 border border-sky-200 rounded-xl p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-medina text-white flex items-center justify-center shrink-0 mt-0.5">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm">Persyaratan Lapangan yang Praktis</h4>
+                                <p class="text-xs text-gray-600 mt-0.5">
+                                    Tim kami membawa seluruh mesin dan kabel rol panjang. Di lokasi, kami hanya memerlukan akses keran air bersih dan daya listrik mulai dari 900–1300 Watt.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="shrink-0">
+                            <a href="#kalkulator" class="inline-flex items-center px-4 py-2 bg-white border border-gray-300 hover:border-gray-400 text-gray-800 text-xs font-semibold rounded-lg shadow-sm transition">
+                                Hitung Estimasi Biaya &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- How It Works (Concrete 4-Step Process) -->
             <section class="border-t border-gray-200 bg-white py-14 sm:py-18">
                 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
